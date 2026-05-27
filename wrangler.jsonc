@@ -9,7 +9,8 @@
 	"compatibility_date": "2026-05-27",
 	"assets": {
 		"binding": "assets",
-		"directory": "./dist/browser"
+		"directory": "./dist/browser",
+		"not_found_handling": "single-page-application"
 	},
 	"observability": {
 		"enabled": true
