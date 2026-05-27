@@ -8,7 +8,7 @@
 	"main": "./dist/server/server.mjs",
 	"compatibility_date": "2026-05-27",
 	"assets": {
-		"binding": "ASSETS",
+		"binding": "assets",
 		"directory": "./dist/browser"
 	},
 	"observability": {
