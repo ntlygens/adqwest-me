@@ -38,8 +38,10 @@
               "allowedHosts": []
             },
             "ssr": {
-              "entry": "src/server.ts"
-            }
+              "entry": "src/server.ts",
+              "experimentalPlatform": "neutral"
+            },
+            "outputPath": "dist"
           },
           "configurations": {
             "production": {
