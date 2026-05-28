@@ -7,6 +7,32 @@
 	"name": "adqwest-me",
 	"main": "./dist/server/server.mjs",
 	"compatibility_date": "2026-05-27",
+	"workers_dev": true,
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "adqwest_db",
+			"database_id": "7b83dddf-194a-4c86-82c5-68d84ceb7ff1",
+			"remote": true
+		}
+	],
+	"env": {
+		"production": {
+			"d1_databases": [
+				{
+					"binding": "DB",
+					"database_name": "adqwest_db",
+					"database_id": "7b83dddf-194a-4c86-82c5-68d84ceb7ff1"
+				}
+			],
+			"routes": [
+				{
+					"pattern": "adqwestme.com/*",
+					"zone_name": "adqwestme.com"
+				}
+			]
+		}
+	},
 	"assets": {
 		"binding": "assets",
 		"directory": "./dist/browser",
@@ -37,7 +63,6 @@
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
 	 */
 	// "vars": {  "MY_VARIABLE": "production_value" }
-	
 	/**
 	 * Service Bindings (communicate between multiple Workers)
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
