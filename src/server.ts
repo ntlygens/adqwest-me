@@ -1,16 +1,4 @@
 import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
-import { HttpInterceptorFn } from '@angular/common/http';
-
-export const stripHostInterceptor: HttpInterceptorFn = (req, next) => {
-  // Check if the host header exists and delete it
-  if (req.headers.has('host')) {
-    const cleanHeaders = req.headers.delete('host');
-    const modifiedReq = req.clone({ headers: cleanHeaders });
-    return next(modifiedReq);
-  }
-  
-  return next(req);
-};
 
 const angularApp = new AngularAppEngine({
 	// It is safe to set allow `localhost`, so that SSR can run in local development,
